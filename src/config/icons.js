@@ -1,17 +1,12 @@
-import { library } from '@fortawesome/fontawesome-svg-core';
 import {
-    faComment, faInfoCircle, faCheckCircle, faExclamationCircle, faTimesCircle,
+    faCircleCheck, faCircleExclamation, faCircleInfo, faComment, faCircleXmark,
 } from '@fortawesome/free-solid-svg-icons';
-
-library.add([
-    faComment, faInfoCircle, faCheckCircle, faExclamationCircle, faTimesCircle,
-]);
 
 export default {
     message: faComment,
     primary: faComment,
-    info: faInfoCircle,
-    success: faCheckCircle,
-    warning: faExclamationCircle,
-    danger: faTimesCircle,
+    info: faCircleInfo,
+    success: faCircleCheck,
+    warning: faCircleExclamation,
+    danger: faCircleXmark,
 };
