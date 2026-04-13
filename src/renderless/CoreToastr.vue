@@ -62,7 +62,11 @@ export default {
             this.timer = setTimeout(() => this.close(), this.duration);
 
             this.interval = setInterval(() => {
-                this.progress += this.progressRate;
+                this.progress = Math.min(this.progress + this.progressRate, 100);
+
+                if (this.progress >= 100) {
+                    clearInterval(this.interval);
+                }
             }, this.progressDelay);
         },
     },
